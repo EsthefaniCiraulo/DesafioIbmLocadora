@@ -1,0 +1,15 @@
+<h1 class="titulo">Cadastro Veículo</h1>
+<form [formGroup]="form" (ngSubmit)="Reservar()" class="form">
+    <div class="formGroup">
+        <label>De:</label>
+        <input placeholder="modelo" type="datetime-local" id="txtDe" formControlName="de" class="input" />
+    </div>
+    <div class="formGroup">
+        <label>Até:</label>
+        <input placeholder="marca" type="datetime-local" id="txtAte" formControlName="ate" class="input" />
+    </div>
+    <div class="buttonGroup">
+        <a routerLink="/reserva" class="button outline" type="submit">Cancelar</a>
+        <button class="button" type="submit">Cadastrar</button>
+    </div>
+</form>

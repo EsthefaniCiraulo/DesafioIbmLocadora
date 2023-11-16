@@ -1,0 +1,36 @@
+<div class="login">
+  <form [formGroup]="form" (ngSubmit)="login()" class="form">
+    <h1>Login</h1>
+    <div class="formGroup">
+      <label>Usuário:</label>
+      <input
+        type="text"
+        id="txtUsuario"
+        formControlName="usuario"
+        class="input"
+      />
+    </div>
+    <div class="formGroup">
+      <label>Senha:</label>
+      <input
+        type="password"
+        id="txtSenha"
+        formControlName="senha"
+        class="input"
+      />
+    </div>
+    <button class="button" type="submit">Login</button>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      "
+    >
+      <a routerLink="/signup">Cadastre-se</a>
+      <a title="Em Desenvolvimento">Esqueci minha Senha</a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<header class="header">
+  <span style="background-color: transparent; color:white; font-size: 1rem;">Locadora Ciraulo</span>
+  <nav class="nav">
+    <a routerLink="/home" style="color:white">Home</a>
+    <a routerLink="/carro" style="color:white">Carro</a>
+    <a routerLink="/reserva" style="color:white">Reservar</a>
+  </nav>
+  <div *ngIf="!usuario" class="user">
+    <a routerLink="/signup" style="color:white">Cadastre-se</a>
+    <a routerLink="/login" style="color:white">Login</a>
+  </div>
+  <div *ngIf="usuario" class="user">
+    <i class="fa-solid fa-user" style="color: white; background-color: transparent;"></i> 
+    <span style="background-color:transparent; color: white;">{{usuario.nome}}</span>
+    <button class="button outline" title="Logout" (click)="Logout()"><i class="fa-solid fa-arrow-right-from-bracket" style="background-color: transparent; color:white"></i></button>
+  </div>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<footer class="footer">
+  <p style="background-color: transparent; color:white;">Desenvolvido por Esthefani Ciraulo | Todos os diretitos reservados &copy; 2023</p>
+</footer>

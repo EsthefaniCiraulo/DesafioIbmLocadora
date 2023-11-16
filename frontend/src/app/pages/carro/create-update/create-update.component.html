@@ -1,0 +1,28 @@
+<h1 class="titulo">Cadastro Veículo</h1>
+<form [formGroup]="form" (ngSubmit)="Cadastrar()" class="form">
+    <div class="formGroup">
+        <label>Modelo:</label>
+        <input placeholder="modelo" type="text" id="txtModelo" formControlName="modelo" class="input" />
+    </div>
+    <div class="formGroup">
+        <label>Marca:</label>
+        <input placeholder="marca" type="text" id="txtMarca" formControlName="marca" class="input" />
+    </div>
+    <div class="formGroup">
+        <label>Cor:</label>
+        <input placeholder="cor" type="text" id="txtCor" formControlName="cor" class="input" />
+    </div>
+    <div class="formGroup">
+        <label>Placa:</label>
+        <input placeholder="placa" type="text" id="txtPlaca" formControlName="placa" class="input" />
+    </div>
+    <div class="formGroup">
+        <label>Ano Fabricação:</label>
+        <input placeholder="ano" type="number" min="1980" max="2024" id="txtAnoFabricacao" formControlName="anoFabricacao"
+            class="input" />
+    </div>
+    <div class="buttonGroup">
+        <a routerLink="/carro" class="button outline" type="submit">Cancelar</a>
+        <button class="button" type="submit">Cadastrar</button>
+    </div>
+</form>

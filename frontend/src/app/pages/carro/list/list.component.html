@@ -1,0 +1,42 @@
+<div class="list">
+    <h1 class="titulo">Veículos Cadastrados</h1>
+    <div class="buttonGroup">
+        <a routerLink="create" class="button">Novo Veículo</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="th">
+                    ID
+                </th>
+                <th class="th">
+                    Modelo
+                </th>
+                <th class="th">
+                    Marca
+                </th>
+                <th class="th">
+                    Ano Fabricação
+                </th>
+                <th class="th">
+                    Placa
+                </th>
+                <th class="th">
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr class="tr" *ngFor="let veiculo of veiculos">
+                <td class="td">{{veiculo.Id}}</td>
+                <td class="td">{{veiculo.Modelo}}</td>
+                <td class="td">{{veiculo.Marca}}</td>
+                <td class="td">{{veiculo.AnoFabricacao}}</td>
+                <td class="td">{{veiculo.Placa}}</td>
+                <td class="td" style="text-align: center;">
+                    <button title="Excluir" (click)="excluir(veiculo.Id)" class="button outline"><i class="fa-solid fa-trash" style="background-color: transparent;"></i></button>
+                    <a routerLink='/carro/create/{{veiculo.Id}}' class="button outline"><i class="fa-solid fa-pencil" style="background-color: transparent;"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

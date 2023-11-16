@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    gap:2rem;
+    height: 80dvh;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    max-width: 50%;
+    object-fit: cover;
+
+}
+
+.titulo{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 4rem;
+    color:#292929;
+}
+
+.subTitulo{
+    font-size: 2rem;
+    color: #4e4e4e;
+}

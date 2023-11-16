@@ -1,0 +1,86 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.card {
+    width: 25rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #565656;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid #ccc;
+    text-overflow: ellipsis;
+}
+
+.card-body{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-footer{
+    display: flex;
+}
+
+.button-card{
+    width: 100%;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.button-cancelar{
+    background: none;
+    background-color: rgb(255, 59, 59);
+}
+
+.button-indisponivel{
+    color: white;
+    background: none;
+    background-color: #292929;
+    cursor:not-allowed;
+}
+
+.button-card:hover{
+    box-shadow: none;
+}
+
+.strong{
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.itemGroup{
+    display: flex;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.9rem;
+}
+

@@ -1,0 +1,24 @@
+<h1 class="titulo">Carros Disponiveis</h1>
+
+<div style="display: flex; justify-content: flex-end; gap:1rem">
+    <label for="chkSomenteDisponivel">Somente Disponiveis: </label><input id="chkSomenteDisponivel" type="checkbox" (click)="ExibirSomenteDisponiveis()">
+</div>
+<div class="list">
+    <div *ngFor="let veiculo of veiculos" class="card">
+        <div class="card-header">
+            {{veiculo.Marca}} - {{veiculo.Modelo}}
+        </div>
+        <div class="card-body">
+            <p class="item"><span class="strong">ANO FABRICAÇÃO</span> {{veiculo.AnoFabricacao}}</p>
+            <div class="itemGroup">
+                <p class="item"><span class="strong">PLACA</span> {{veiculo.Placa}}</p>
+                <p class="item"><span class="strong">COR</span> {{veiculo.Cor}}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a *ngIf="VerificarDisponibilidade(veiculo.Id)" routerLink="./reservar/{{veiculo.Id}}" class="button button-card">Reservar</a>
+            <button (click)="CancelarReserva(veiculo.Id)" *ngIf="!VerificarDisponibilidade(veiculo.Id) && VerificaUsuarioReserva(veiculo.Id)" class="button button-card button-cancelar">Cancelar Reserva</button>
+            <button disabled *ngIf="!VerificarDisponibilidade(veiculo.Id) && !VerificaUsuarioReserva(veiculo.Id)" type="button" class="button button-card button-indisponivel">Indisponivel</button>
+        </div>
+    </div>
+</div>
