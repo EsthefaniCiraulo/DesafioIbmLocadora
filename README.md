@@ -2,11 +2,11 @@
 
 # Tecnologias Utilizadas
 
-#Banco de dados: MySql;
+Banco de dados: MySql;
 
-#BACKEND:JAVA, Spring;
+BACKEND:JAVA, Spring;
 
-#FRONTEND: Angular;
+FRONTEND: Angular;
 
 Passo a passo para rodar a aplicação
 
